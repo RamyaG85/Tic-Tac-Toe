@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <h1>TIC TAC TOE</h1>
+  <h2>1 PLAYER</h2>
+  <h2>2 PLAYERS</h2>
+  <h4></h4>
+  <div class="main">
+    <section class="row1col1 main--sec" onclick="buttonClick('row1col1')"></section>
+    <section class="row1col2 main--sec" onclick="buttonClick('row1col2')"></section>
+    <section class="row1col3 main--sec" onclick="buttonClick('row1col3')"></section>
+    <section class="row2col1 main--sec" onclick="buttonClick('row2col1')"></section>
+    <section class="row2col2 main--sec" onclick="buttonClick('row2col2')"></section>
+    <section class="row2col3 main--sec" onclick="buttonClick('row2col3')"></section>
+    <section class="row3col1 main--sec" onclick="buttonClick('row3col1')"></section>
+    <section class="row3col2 main--sec" onclick="buttonClick('row3col2')"></section>
+    <section class="row3col3 main--sec" onclick="buttonClick('row3col3')"></section>
+  </div>
+  <!-- <div>
+    <!-- <button>Player1</button>
+    <button>Player2</button> -->
+    <!-- <input type="reset" value="">
+    <input type="text" name="Player1" id="player1">
+    <input type="text" name="Player2" id="player2">
+  </div> -->
+
+  <form class="playerInfo" onsubmit="return submitMessage(event)">
+
+    
+    <!-- Player1 -->
+    <button>Player1 (X)</button>
+    <!-- <label for="player1">Player1: </label> -->
+    <input type="text" name="player1" id="player1" placeholder="First Player name">
+    <!-- Player2 -->
+    <button>Player2 (O)</button>
+    <!-- <label for="player2">Player2: </label> -->
+    <input type="text" name="player2" id="player2" placeholder="Second Player name">
+    <!-- Message-->
+    <!-- <label for="message">Message: </label>
+    <textarea name="message" id="message" cols="20" rows="3" required>Enter your message here</textarea> -->
+    <!--Clear button-->
+    <button type="reset" id="reset" onclick=handleReset()>Restart</button>
+    <!--Submit-->
+    <!-- <input type="submit"> -->
+  </form>
+  <script src="./main.js"></script>
+</body>
+</html>
