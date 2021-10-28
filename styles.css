@@ -5,6 +5,8 @@
 
 img {
   position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1 {
@@ -27,6 +29,12 @@ h1 {
   top: 650px;
   left: 600px;
   color: white;
+  text-decoration: none;
+}
+
+.player2Heading:hover {
+  text-decoration: underline;
+  color: blue;
 }
 
 h4 {
