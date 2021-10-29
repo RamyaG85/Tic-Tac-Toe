@@ -3,6 +3,8 @@ firstPlayerFlag = true;
 const cross="X";
 const circle="O";
 let msg ="";
+let player1 ="";
+let player2 ="";
 
 cell1 = document.querySelector('.row1col1');
 cell2 = document.querySelector('.row1col2');
@@ -17,6 +19,7 @@ cell9 = document.querySelector('.row3col3');
 currentMsg = document.querySelector('h2');
 allCells = document.querySelectorAll(".main--sec");
 
+
 //Function will be invoked for each button click
 const buttonClick = (className) => {  
   currCell = document.getElementsByClassName(className)[0];  
@@ -27,9 +30,12 @@ const buttonClick = (className) => {
     currCell.innerText = circle;
     currCell.style.color= "blue";
   }
-  msg = !firstPlayerFlag ? "Player 1 has to play": "Player 2 has to play";  
+  // console.log("player1 is", player1);
+  msg = (!firstPlayerFlag ? (player1?player1:'Player 1') : (player2?player2:'Player 2'))+" has to play";  
   matchCheck(className, currCell);
+  // Disabling the current cell to prevent clicking again
   currCell.style.pointerEvents = 'none';
+  
 }
 
 //Gets trigerred inside buttonClick function for each button and checks for possible matches
@@ -56,15 +62,19 @@ const matchCheck = (className, currCell) => {
      (cell5.innerText == cell2.innerText && cell5.innerText== cell8.innerText)))
    )
      {     
-        msg = firstPlayerFlag ? "Congratulations !! Player 1 has won": "Congratulations !! Player 2 has won";
+        msg = "Congratulations " + (firstPlayerFlag ?(player1?player1:'Player 1') : (player2?player2:'Player 2'))+ "!! You've won";
+        // Disabling all buttons
         [...allCells].map(item => item.style.pointerEvents = 'none');
+        //Popping out the result on entire screen with background greyed out by adding a different class to show the display
         document.querySelector(".winningMessageText").innerText = msg;
         document.querySelector(".winningMessage").classList.add("winMsgShow");        
       }  
     
       else if ([...allCells].every(item => item.innerText !== "")){        
         msg = "It's a tie !!";
+        // Disabling all buttons
         [...allCells].map(item => item.style.pointerEvents = 'none');
+        //Popping out the result on entire screen with background greyed out by adding a different class to show the display
         document.querySelector(".winningMessageText").innerText = msg;
         document.querySelector(".winningMessage").classList.add("winMsgShow");
       }   
@@ -75,13 +85,35 @@ const matchCheck = (className, currCell) => {
 
 
 const handleReset = () => {
+  //The result screen with background greyed out has to be removed by removing the class which was added to show the display
   document.querySelector(".winningMessage").classList.remove("winMsgShow");  
+  // Enabling all buttons after converting from nodelist to array list and using map
   [...allCells].map(item => {
     item.style.pointerEvents = 'all';
     item.innerText = "";    
   });
+  //Clearing all the variables
   firstPlayerFlag = true;
   currCell = "";
   msg="";
   currentMsg.innerText = msg;  
+}
+
+// Storing the Player names for display and to display in leader board
+const submitMessage = (event) => {
+  event.preventDefault();
+  
+  player1 = document.querySelector('#player1').value;
+  player2 = document.querySelector('#player2').value;
+  console.log(player1);
+  console.log(player2);
+
+  
+  /* Fetch existing messages from sessionStorage */
+  // let currentMessages = [];
+
+  // if (window.sessionStorage.getItem("messages")) {
+  //   currentMessages = JSON.parse(window.sessionStorage.getItem("messages"));
+  // }
+
 }

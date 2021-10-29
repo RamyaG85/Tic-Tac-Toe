@@ -4,13 +4,16 @@
 }
 body{
   background-color: rgb(54, 192, 61);
+  // text-align: center;
   // position: relative;
 }
 
 h1{
   text-align: center;
-  margin: 50px;
+  // margin-left: 400px ;
+  margin:50px;
   color: black;
+  // width: 400px;
 }
 
 h2{
@@ -52,7 +55,7 @@ h2{
     width: 100px;
   }
 
-  #reset,#homeButton{
+  #homeButton{
     margin-left: 50px;
     width: 100px;
     grid-column: 1/span 2;
@@ -89,6 +92,7 @@ h2{
   }    
 }
 
+// To display the result message when the game is finished. this class will be added from JS.
 .winMsgShow{
   display: flex;
 }

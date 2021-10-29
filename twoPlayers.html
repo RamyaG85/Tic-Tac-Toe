@@ -6,8 +6,8 @@
   <title>Tic Tac Toe</title>
   <link rel="stylesheet" href="./styles/playerStyles.css">
 </head>
-<body>
-  <h1>TIC TAC TOE</h1>  
+<body>  
+  <h1>TIC TAC TOE</h1>   
   <h2></h2>
   <div class="main">
     <section class="row1col1 main--sec" onclick="buttonClick('row1col1')"></section>
@@ -24,6 +24,7 @@
      <div class="winningMessageText"></div>
      <button type="reset" id="reset" onclick=handleReset()>Restart</button>
   </div>
+  
 
   <form class="playerInfo" onsubmit="return submitMessage(event)">    
     <!-- Player1 -->
@@ -33,7 +34,8 @@
     <!-- Player2 -->
     <button>Player2 (O)</button>
     <!-- <label for="player2">Player2: </label> -->
-    <input type="text" name="player2" id="player2" placeholder="Second Player name">    
+    <input type="text" name="player2" id="player2" placeholder="Second Player name"> 
+    <button type="submit">Submit</button>   
     <!--Clear button-->
     <button type="reset" id="reset" onclick=handleReset()>Restart</button>
     <!--Home-->

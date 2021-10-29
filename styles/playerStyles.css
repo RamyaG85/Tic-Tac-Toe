@@ -50,7 +50,7 @@ h2 {
 .playerInfo button {
   width: 100px;
 }
-.playerInfo #reset, .playerInfo #homeButton {
+.playerInfo #homeButton {
   margin-left: 50px;
   width: 100px;
   grid-column: 1/span 2;
