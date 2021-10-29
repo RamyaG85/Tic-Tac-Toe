@@ -88,40 +88,38 @@ h4{
 }
 
 // Media query for tablet size
-// @media screen and (min-width: 768px) {
-//   h1{
-//     position: absolute;
-//     top :550px;
-//     left:200px;
-//     color: white;
-//     margin: 50px;
-//     // text-align: center;
-//   }
-// }
+@media screen and (min-width: 768px) {
+  h1{
+    position: absolute;
+    top :550px;
+    left:200px;    
+  }
+
+  .player2Heading{
+    position: absolute;
+    top :700px;
+    left: 300px; 
+  }
+}
 
 // Media query for desktop size
-// @media screen and (min-width: 991px) {
-//   h1{
-//     position: absolute;
-//     top :600px;
-//     left:600px;
-//     color: white;
-//     margin: 50px;
-//     // text-align: center;
-//   }
-//   .player1Heading{
-//     position: absolute;
-//     top :600px;
-//     left: 600px;
-//     color: white;
-//   }
-//   .player2Heading{
-//     position: absolute;
-//     top :750px;
-//     left: 600px;
-//     color: white;
-//     text-decoration: none ;
+@media screen and (min-width: 991px) {
+  h1{
+    position: absolute;
+    top :600px;
+    left:600px;
+    color: white;
+    margin: 50px;
+    // text-align: center;
+  }
+  
+  .player2Heading{
+    position: absolute;
+    top :750px;
+    left: 700px;
+    color: white;
+    text-decoration: none ;
   
     
-//   }
-// }
+  }
+}
