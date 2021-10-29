@@ -12,7 +12,7 @@ img {
 h1 {
   position: absolute;
   top: 500px;
-  left: 500px;
+  left: 550px;
   color: white;
   margin: 50px;
 }
@@ -77,4 +77,29 @@ h4 {
   margin-left: 50px;
   width: 100px;
   grid-column: 1/span 2;
+}
+
+@media screen and (min-width: 991px) {
+  h1 {
+    position: absolute;
+    top: 500px;
+    left: 500px;
+    color: white;
+    margin: 50px;
+  }
+
+  .player1Heading {
+    position: absolute;
+    top: 600px;
+    left: 600px;
+    color: white;
+  }
+
+  .player2Heading {
+    position: absolute;
+    top: 650px;
+    left: 600px;
+    color: white;
+    text-decoration: none;
+  }
 }
